@@ -7,90 +7,129 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: white;
     min-height: 100vh;
+    color: white;
     background: linear-gradient(135deg, #141e30, #243b55, #6a11cb);
     background-attachment: fixed;
-    padding-bottom: 30px;
 }
+
+/* Glass effect */
+
+.glass {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+/* Navigation */
 
 nav {
     width: 90%;
     margin: 20px auto;
     padding: 18px 25px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav h2 {
-    font-size: 24px;
+    color: #9be7ff;
 }
 
-nav a {
+.nav-links a {
     color: white;
     text-decoration: none;
     margin-left: 18px;
 }
 
-nav a:hover {
-    color: #b8f2ff;
-}
-
-.glass {
-    width: 85%;
-    max-width: 950px;
-    margin: 30px auto;
-    padding: 35px;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-}
-
-.hero {
-    text-align: center;
-    padding: 100px 30px;
-}
-
-.hero h1 {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.hero span {
+.nav-links a:hover {
     color: #9be7ff;
 }
 
-.hero h2 {
+/* Sections */
+
+.page {
+    width: 85%;
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 40px;
+
+    min-height: 300px;
+}
+
+/* Home */
+
+.home {
+    text-align: center;
+    padding: 70px 30px;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid rgba(255, 255, 255, 0.6);
+
+    margin-bottom: 20px;
+}
+
+.home h1 {
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
-.hero p {
+.home h1 span {
+    color: #9be7ff;
+}
+
+.home h2 {
+    margin-bottom: 15px;
+}
+
+.home p {
     max-width: 650px;
     margin: auto;
 }
 
+/* Headings */
+
 section h2 {
-    margin-bottom: 20px;
     color: #9be7ff;
+    margin-bottom: 20px;
 }
+
+/* Buttons */
 
 .button {
     display: inline-block;
+
     margin-top: 20px;
+    margin-right: 8px;
+
     padding: 12px 22px;
+
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.18);
+
     border: 1px solid rgba(255, 255, 255, 0.4);
+
     color: white;
+
     text-decoration: none;
 }
 
 .button:hover {
     background: rgba(255, 255, 255, 0.3);
 }
+
+/* Skills */
 
 .skills {
     display: flex;
@@ -100,14 +139,20 @@ section h2 {
 
 .skills div {
     padding: 12px 20px;
+
     border-radius: 15px;
+
     background: rgba(255, 255, 255, 0.15);
 }
+
+/* Projects */
 
 .project {
     padding: 20px;
     margin: 15px 0;
+
     border-radius: 15px;
+
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -115,14 +160,20 @@ section h2 {
     margin-bottom: 8px;
 }
 
+/* Links */
+
 section a {
     color: #9be7ff;
 }
 
+/* Footer */
+
 footer {
     text-align: center;
-    margin-top: 40px;
+    padding: 30px;
 }
+
+/* Mobile */
 
 @media (max-width: 700px) {
 
@@ -131,16 +182,20 @@ footer {
         gap: 15px;
     }
 
-    nav a {
+    .nav-links {
+        text-align: center;
+    }
+
+    .nav-links a {
         display: inline-block;
         margin: 5px;
     }
 
-    .hero h1 {
+    .home h1 {
         font-size: 32px;
     }
 
-    .glass {
+    .page {
         width: 92%;
         padding: 25px;
     }
